@@ -72,10 +72,6 @@
                     :templates="templates.templates"
                     :mode="'click'"
                   />
-                  <ChannelSelector 
-                    :channels="channels"
-                    :mode="'hover'"
-                  />
                 </template>
               </ChatInput>
             </template>
