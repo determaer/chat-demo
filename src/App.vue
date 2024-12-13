@@ -3,7 +3,7 @@
  import FloatFeedChatApp from './components/FloatFeedChatApp.vue';
  import FloatBaseChatApp from './components/FloatBaseChatApp.vue';
 import {
-  messages, chats, channels,
+  messages, chats,
   userProfiles, templates
 } from './data';
 
@@ -11,7 +11,6 @@ import {
 const data3 = {
   messages,
   chats,
-  channels,
   userProfiles,
   templates
 };
@@ -38,9 +37,6 @@ const dataProvider = {
   },
   getFeed(chatId) {
     return data3.messages.filter(m => m.chatId === chatId);
-  },
-  getChannels() {
-    return data3.channels;
   },
   getTemplates() {
     return data3.templates;

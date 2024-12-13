@@ -114,7 +114,6 @@ import {
   FileUploader,
   ButtonEmojiPicker,
   ButtonTemplateSelector,
-  ChannelSelector,
   ThemeMode,
 } from "@mobilon-dev/chotto";
 
@@ -173,7 +172,6 @@ const chatsStore = useChatsStore();
 const selectedChat = ref(null);
 const messages = ref([]);
 const userProfile = ref({});
-const channels = ref([]);
 const templates = ref([]);
 const isOpenChatPanel = ref(false);
 const isScrollToBottomOnUpdateObjectsEnabled = ref(false);
@@ -278,7 +276,6 @@ const selectChat = (chat) => {
 onMounted(() => {
   userProfile.value = props.authProvider.getUserProfile(props.index);
   chatsStore.chats = props.dataProvider.getChats();
-  channels.value = props.dataProvider.getChannels();
   templates.value = props.dataProvider.getTemplates()
 });
 </script>

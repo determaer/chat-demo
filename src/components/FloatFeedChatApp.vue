@@ -124,7 +124,6 @@ const chatsStore = useChatsStore();
 const selectedChat = ref(null);
 const messages = ref([]);
 const userProfile = ref({});
-const channels = ref([]);
 const isScrollToBottomOnUpdateObjectsEnabled = ref(false);
 const filebumpUrl = ref('https://filebump2.services.mobilon.ru');
 const isOpenChatPanel = ref(false);
@@ -214,7 +213,6 @@ const addMessage = (message) => {
 onMounted(() => {
   userProfile.value = props.authProvider.getUserProfile(props.index);
   chatsStore.chats = props.dataProvider.getChats();
-  channels.value = props.dataProvider.getChannels();
   selectedChat.value = chatsStore.chats[props.index]
   messages.value = getFeedObjects(false)
   themes[props.index].default = true
